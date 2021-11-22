@@ -13,13 +13,7 @@ The command that should be done to get into the container shell instead of runni
 ```
 docker run -it --network javaserver3 --mount source=clientvol,target=/usr/src/app/clientdata clientjava:1.0 /bin/bash
 ```
-## Volumes
-Volumes are often a better choice than persisting data in a container’s writable layer, because a volume does not increase the size of the containers using it, and the volume’s contents exist outside the lifecycle of a given container.
+## How to run this Project
 
-Volumes can be more safely shared among multiple containers.
+For this you will find two shell scripts inside this project i.e. **fileclient.sh** and **fileserver.sh**. Firstly run the fileserver.sh and then you have to run fileclient.sh. You have to run these two files and you are ready to go.
 
-## User Defined Bridge Network
-User-defined bridges provide automatic DNS resolution between containers
-
-User-defined bridges provide better isolation
-Linked containers on the default bridge network share environment variables.
